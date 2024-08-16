@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Blog index</title>
+        <link rel="stylesheet" href="/styles.css">
+    </head>
+    <body>
+    <h1>Blogs</h1>
+    <a href="/blogs/new" class="create-button">Create Blog</a>
+    <ul>
+        <% blogs.forEach(blog => { %>
+        <li class="blog-item">
+            <span><%= blog.title %></span>
+            <div class="blog-buttons">
+            <a href="/blogs/<%= blog._id %>" class="read-button">Read</a>
+        <a href="/blogs/<%= blog._id %>/edit" class="edit-button"> Edit</a>
+        <form action="/blogs/<%= blog._id %>?_method=DELETE" method="post" style="display:inline;">
+            <button type="submit" class="delete-button">Delete</button>
+        </form>
+    </div>
+        </li>
+    <% }); %>
+    </ul>   
+    </body>
+</html>

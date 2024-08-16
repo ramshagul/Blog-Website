@@ -1,0 +1,115 @@
+body {
+    font-family: 'Times New Roman', Times, serif;
+    margin: 20px;
+    color: #333;
+}
+
+h1 {
+    font-size: 2em;
+    color: #2c3e50;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+a {
+    text-decoration: none;
+    color: #3498db;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li.blog-item {
+    margin: 10px 0;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.blog-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.blog-buttons a, .blog-buttons button {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    background-color: #3498db;
+    color: white;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s;
+}
+
+.blog-buttons a:hover, .blog-buttons button:hover {
+    background-color: #2980b9; /* Darker shade on hover */
+}
+
+/* Styling the form container */
+form.index {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    padding: 0 20px;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.8); /* Light background for form */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+input[type="text"],
+textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 100%;
+}
+
+input[type="text"]:focus,
+textarea:focus {
+    border-color: #3498db; /* Highlight border on focus */
+}
+
+/* Button styling */
+button {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    background-color: #3498db;
+    color: white;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #2980b9; /* Darker shade on hover */
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    form.index {
+        width: 100%;
+    }
+
+    li.blog-item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .blog-buttons {
+        width: 100%;
+        justify-content: space-between;
+    }
+}
